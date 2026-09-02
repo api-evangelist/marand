@@ -1,0 +1,193 @@
+generated: '2026-09-02'
+method: searched
+source: https://marand.com/en/about
+provider: Marand Software (Marand d.o.o., Ljubljana, Slovenia)
+summary: >-
+  Marand is a TM Forum member that builds cloud-native Open Digital Architecture (ODA)
+  components for communications service providers. Its conformance posture is expressed
+  entirely through TM Forum programs — Open API conformance certification per TMF API,
+  "Ready for ODA" status for the product line, and the SID Information Framework as the
+  data model — rather than through a first-party developer program. Marand publishes no
+  public API reference or machine-readable specification of its own; the contracts its
+  products implement are the TM Forum Open API specifications, which TM Forum publishes.
+  Two conformance certification reports are publicly downloadable from TM Forum's
+  conformance store and are cited verbatim below. ISO certification numbers were read
+  from the SIQ certification badge Marand serves on its own site.
+
+domain_standard:
+  market: Telecom BSS / OSS — communications service providers
+  standard: TM Forum Open API (Open Digital Architecture)
+  declared: true
+  signature: >-
+    TMF-numbered Open API implementations (TMF620, TMF633, TMF673) certified under the
+    TM Forum Open API Conformance program, plus "Ready for ODA" product-line status and
+    the TM Forum Information Framework (SID) as the underlying information model.
+  note: >-
+    This is the domain standard for this provider's market. It is asserted by TM Forum's
+    own published certification reports, not only by a marketing page. No first-party
+    OpenAPI is published by Marand, so the standard is evidenced by certification records
+    rather than by a fetchable contract on a Marand host.
+  evidence:
+    - url: https://s3.us-east-1.amazonaws.com/tmf-sfdc-public/Conformance/CON-01460/Marand-Certification%20Report-TMF633%20API-Mar2022.pdf
+      status: 200
+    - url: https://s3.us-east-1.amazonaws.com/tmf-sfdc-public/Conformance/CON-01846/Marand-Certification%20Report-TMF673%20API-May2023.pdf
+      status: 200
+
+conformance:
+  - id: tmforum-open-api-tmf633
+    name: TM Forum TMF633 Service Catalog Management API
+    conforms: true
+    method: searched
+    evidence:
+      certification: TM Forum Open API Conformance Certification
+      api_release: 21.0 / 4.0
+      report_date: '2022-03-29'
+      product: Unified Product Catalog (UPC)
+      url: https://s3.us-east-1.amazonaws.com/tmf-sfdc-public/Conformance/CON-01460/Marand-Certification%20Report-TMF633%20API-Mar2022.pdf
+      http_status: 200
+      certified_resources:
+        - {resource: Service Specification, operations: [get, list, post, patch, delete]}
+        - {resource: Service Candidate, operations: [get, list, post, patch, delete]}
+        - {resource: Catalog, operations: [get, list, post, patch, delete]}
+        - {resource: Category, operations: [get, list, post, patch, delete]}
+      quote: >-
+        "TM Forum Open API Name: TMF633 - Service Catalog ... TM Forum Open API Release
+        Version: 21.0 / 4.0 ... Report Date: 29/03/2022"
+
+  - id: tmforum-open-api-tmf673
+    name: TM Forum TMF673 Geographic Address Management API
+    conforms: true
+    method: searched
+    evidence:
+      certification: TM Forum Open API Conformance Certification
+      api_release: 21.0 / 4.0
+      report_date: '2023-05-08'
+      product: Location Management
+      url: https://s3.us-east-1.amazonaws.com/tmf-sfdc-public/Conformance/CON-01846/Marand-Certification%20Report-TMF673%20API-May2023.pdf
+      http_status: 200
+      certified_resources:
+        - {resource: Geographic Address Validation, operations: [create, update, retrieve, list]}
+      quote: >-
+        "TM Forum Open API Name: TMF673 - Geographic Address Management ... Report Date:
+        08/05/2023"
+
+  - id: tmforum-open-api-tmf620
+    name: TM Forum TMF620 Product Catalog Management API
+    conforms: true
+    method: searched
+    note: >-
+      Implemented by the Unified Product Catalog and stated as such inside Marand's own
+      TM Forum TMF633 certification report. A separate publicly downloadable TMF620
+      certification report for Marand was not located in this pass, so this entry rests on
+      the vendor statement inside a TM Forum-published document rather than on its own
+      certification record.
+    evidence:
+      type: vendor-statement-in-tmforum-report
+      url: https://s3.us-east-1.amazonaws.com/tmf-sfdc-public/Conformance/CON-01460/Marand-Certification%20Report-TMF633%20API-Mar2022.pdf
+      http_status: 200
+      quote: >-
+        "UPC is based on TM Forum's Information Framework (SID) model and exposes a
+        standard API (TMF620 & TMF633 Open API)."
+
+  - id: tmforum-open-api-tmf674
+    name: TM Forum TMF674 Geographic Site Management API
+    conforms: false
+    method: searched
+    note: >-
+      Marand's Location Management component is stated to expose TMF674 alongside TMF673,
+      but the certification report located covers TMF673 only. Recorded as implemented,
+      not as independently certified.
+    evidence:
+      type: vendor-statement-in-tmforum-report
+      url: https://s3.us-east-1.amazonaws.com/tmf-sfdc-public/Conformance/CON-01846/Marand-Certification%20Report-TMF673%20API-May2023.pdf
+      http_status: 200
+      quote: >-
+        "Location Management serves as a wrapper component that implements proprietary
+        APIs of underlying data providers and exposes TMF673 and TMF674 APIs for a
+        standardized programmatic location data access."
+
+  - id: tmforum-open-api-tmf760
+    name: TM Forum TMF760 Product Configuration API (Gen5 Open API)
+    conforms: false
+    method: searched
+    note: >-
+      Marand is a co-author, not merely an implementer. Orange, Amdocs and Marand Software
+      each built an implementation and then produced the unified specification that TM
+      Forum published as one of the first twenty 5th-generation Open APIs, presented at
+      Digital Transformation World 2023. Recorded as a standards contribution; no Marand
+      conformance certification report for TMF760 was located.
+    evidence:
+      type: provider-blog
+      url: https://marand.com/en/blog/post/marand-orange-dtw
+      http_status: 200
+      quote: >-
+        "the Product Configuration API (TMF-760) stood out as a collaborative endeavor
+        involving Orange, Amdocs, and Marand Software ... they ... created a unified API
+        specification, which they have now made available through TM Forum's Open API
+        initiative."
+
+  - id: tmforum-ready-for-oda
+    name: TM Forum "Ready for ODA" product-line status
+    conforms: true
+    method: searched
+    evidence:
+      type: provider-blog
+      awarded: '2024-03'
+      url: https://marand.com/en/blog/post/marand-achieved-ready-for-oda-status
+      http_status: 200
+      quote: >-
+        "In March 2024, Marand joined the exclusive group of software vendors to achieve
+        the 'Ready for ODA' status."
+      assessment_dimensions:
+        - principles and rules
+        - skills
+        - Open APIs
+        - components
+        - agile governance
+        - process models
+
+  - id: tmforum-sid-information-framework
+    name: TM Forum Information Framework (SID)
+    conforms: true
+    method: searched
+    evidence:
+      type: provider-page
+      url: https://marand.com/en/about
+      http_status: 200
+      quote: >-
+        "Our components implement TM Forum's frameworks, including Information Framework
+        (SID) and Open API. Marand was awarded a gold badge for certified Open APIs."
+
+  - id: iso-9001
+    name: ISO 9001 Quality Management
+    conforms: true
+    method: searched
+    note: >-
+      Read from the SIQ certification badge Marand serves on its own homepage; the
+      certificate number is embedded as text inside the SVG.
+    evidence:
+      certificate: Q-2254
+      certifier: SIQ Ljubljana
+      url: https://marand.com/img/certs/siq.svg
+      http_status: 200
+
+  - id: iso-iec-27001
+    name: ISO/IEC 27001 Information Security Management
+    conforms: true
+    method: searched
+    note: >-
+      Read from the same SIQ certification badge served on marand.com; certificate number
+      embedded as text inside the SVG.
+    evidence:
+      certificate: I-097
+      certifier: SIQ Ljubljana
+      url: https://marand.com/img/certs/siq.svg
+      http_status: 200
+
+not_asserted:
+  - id: oauth2
+    reason: No public API reference, securityScheme or auth documentation is published.
+  - id: rfc9457
+    reason: No public error contract is published.
+  - id: fapi
+    reason: Not a financial-grade API surface; nothing declared.

@@ -1,0 +1,15 @@
+generated: '2026-09-02'
+method: searched
+source: https://www.marand.com/en/
+limit_count: 0
+note: >-
+  No published rate limits. Marand operates no public API host and no developer
+  documentation, so there is no runtime limit, no rate-limit response header and no
+  documented 429 behaviour to record. Its TM Forum Open API implementations run inside
+  customer-deployed instances of its BSS components, where any limits are a deployment
+  concern rather than a published contract.
+rate_limits: []
+headers: []
+evidence:
+  - {url: 'https://www.marand.com/en/', status: 200}
+  - {url: 'https://api.marand.com/', status: null, note: 'NXDOMAIN — no API host exists.'}

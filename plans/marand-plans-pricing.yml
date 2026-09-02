@@ -1,0 +1,16 @@
+generated: '2026-09-02'
+method: searched
+source: https://www.marand.com/en/
+plan_count: 0
+currency: null
+note: >-
+  Marand publishes no pricing page, no plan tiers and no self-service sign-up. It sells
+  licensed BSS components (Unified Product Catalog, 360 Customer / Inventory, CPQ, CRM,
+  Multiservice Enterprise Billing) and custom software services to communications service
+  providers through a direct enterprise sales motion; the only commercial call to action
+  on the site is a contact form and info@marand.si. This is an honest zero, not a gap in
+  the search.
+plans: []
+evidence:
+  - {url: 'https://www.marand.com/en/', status: 200, note: 'Site nav has Home, Solutions, Products & Services, Blog, Career, About us — no Pricing.'}
+  - {url: 'https://marand.com/en/products/services', status: 200, note: 'Custom software solutions page; consulting/engagement framing, no rate card.'}

@@ -1,0 +1,84 @@
+# Marand
+
+> Marand Software (Marand d.o.o., Ljubljana, Slovenia) builds cloud-native Business
+> Support System (BSS) components for communications service providers. Its product line
+> — Unified Product Catalog, 360 Customer / Inventory, CPQ, CRM and Multiservice
+> Enterprise Billing — is built on TM Forum's Open Digital Architecture (ODA), implements
+> the TM Forum Information Framework (SID), and exposes TM Forum Open APIs. Marand holds
+> TM Forum Open API Gold certified member status, achieved "Ready for ODA" status in
+> March 2024, and co-authored the TMF760 Product Configuration API with Orange and Amdocs
+> as one of the first twenty 5th-generation TM Forum Open APIs.
+
+## What an agent should know first
+
+- **There is no public Marand API.** No developer portal, no API reference, no OpenAPI,
+  no sandbox, no API keys, no pricing. `api.marand.com`, `docs.marand.com` and
+  `developer.marand.com` do not resolve. Marand's APIs ship inside licensed BSS
+  components deployed at operator customers.
+- **The contracts Marand implements are published by TM Forum, not by Marand.** If you
+  need the machine-readable shape of a Marand interface, read the TM Forum Open API
+  specification for the relevant TMF number (github.com/tmforum-apis) — but note that
+  those specifications belong to TM Forum, and a Marand deployment's base URL, auth and
+  extensions are tenant-specific.
+- **Engagement is enterprise sales.** The only route in is the contact form or
+  info@marand.si.
+
+## Company
+
+- [Marand home](https://www.marand.com/en/): products, industries served, contact.
+- [About us](https://marand.com/en/about): ODA positioning, TM Forum framework
+  implementation, TM Forum Open API gold certified member statement.
+- [Blog](https://marand.com/en/blog): engineering and standards posts.
+- [Careers](https://marand.com/en/career)
+- [Privacy policy](https://marand.com/en/privacy-policy)
+- [Cookie policy](https://marand.com/en/cookie-policy)
+- Contact: info@marand.si · +386 1 470 31 00 · Koprska ulica 100, Ljubljana, Slovenia
+
+## Products
+
+- [Unified Product Catalog (UPC)](https://marand.com/en/products/upc): master data
+  management for service, product, offering and price data. Exposes TMF620 and TMF633.
+- [360 Customer / Inventory](https://marand.com/en/products/cim): single point of truth
+  for customer, billing account and subscription data. Stated as a TM Forum Open API
+  certified product.
+- [CPQ](https://marand.com/en/products/cpq): configure, price and quote for CSPs.
+- [CRM](https://marand.com/en/products/crm): CRM built for communications service providers.
+- [Multiservice Enterprise Billing (MEB)](https://marand.com/en/products/meb)
+- [Artificial intelligence](https://marand.com/en/products/ai)
+- [Custom software solutions](https://marand.com/en/products/services): consulting,
+  custom development and integration (Java/Spring Boot, Angular/Vue, Oracle, PostgreSQL,
+  Infinispan; REST and SOAP/XML integration).
+
+## Standards conformance
+
+- TMF633 Service Catalog Management API — TM Forum conformance certified, release 21.0/4.0,
+  report dated 2022-03-29, for Unified Product Catalog.
+- TMF673 Geographic Address Management API — TM Forum conformance certified, release
+  21.0/4.0, report dated 2023-05-08, for Location Management.
+- TMF620 Product Catalog Management API — implemented by UPC (stated inside the TMF633
+  certification report).
+- TMF674 Geographic Site Management API — implemented by Location Management.
+- TMF760 Product Configuration API — co-authored with Orange and Amdocs; presented at
+  TM Forum Digital Transformation World 2023.
+- TM Forum "Ready for ODA" — awarded March 2024.
+- TM Forum Information Framework (SID) — implemented across components.
+- ISO 9001 (SIQ certificate Q-2254) and ISO/IEC 27001 (SIQ certificate I-097).
+
+Full detail with evidence URLs: `conformance/marand-conformance.yml` in this repo.
+
+## What this repo holds
+
+- `conformance/marand-conformance.yml` — TM Forum Open API certifications, ODA status and
+  ISO certificates, each with an evidence URL and HTTP status.
+- `security/marand-domain-security.yml` — probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture.
+- `well-known/marand-well-known.yml` — the `/.well-known/` probe record (all 404) and the
+  DNS probe showing no API or docs host exists.
+- `plans/marand-plans-pricing.yml` — no published plans (enterprise sales only).
+- `rate-limits/marand-rate-limits.yml` — no published rate limits.
+
+## Not published by Marand
+
+OpenAPI · AsyncAPI · GraphQL · gRPC/Protobuf · WSDL · MCP server · A2A agent card ·
+llms.txt · SDKs or client packages on any registry (npm, PyPI, Maven Central, NuGet,
+RubyGems, crates.io) · CLI · Postman collection · changelog · status page · sandbox ·
+security.txt · public developer portal.

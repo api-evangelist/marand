@@ -1,0 +1,46 @@
+generated: '2026-09-02'
+method: probed
+source: live probes of the named /.well-known/ path list on every Marand web host
+note: >-
+  Every named path 404s on both Marand hosts. Marand serves the site from Apache 2.4.29
+  and returns a standard Apache 404 body for each path, so these are genuine absences and
+  not an SPA catch-all answering 200. No WellKnown or SecurityTxt pointer is emitted in
+  apis.yml, because there is no served document to point at — this file records a
+  measured absence.
+hosts:
+  - host: www.marand.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404, file: null}
+      - {path: /.well-known/openid-configuration, status: 404, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+      - {path: /.well-known/api-catalog, status: 404, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+      - {path: /.well-known/agent-card.json, status: 404, file: null}
+      - {path: /.well-known/agent.json, status: 404, file: null}
+  - host: marand.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404, file: null}
+      - {path: /.well-known/openid-configuration, status: 404, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+      - {path: /.well-known/api-catalog, status: 404, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+      - {path: /.well-known/agent-card.json, status: 404, file: null}
+      - {path: /.well-known/agent.json, status: 404, file: null}
+other_probes:
+  - {url: 'https://marand.com/robots.txt', status: 200, note: 'Present; disallows /js/ /css/ /img/ /files/ only. No sitemap directive.'}
+  - {url: 'https://marand.com/sitemap.xml', status: 404}
+  - {url: 'https://marand.com/llms.txt', status: 404}
+  - {url: 'https://marand.com/openapi.json', status: 404}
+  - {url: 'https://marand.com/manifest.json', status: 200, note: 'PWA icon manifest only; not an API document.'}
+dns_probes:
+  note: No API, docs, developer or portal host resolves under either registrable domain.
+  results:
+    - {host: api.marand.com, result: NXDOMAIN}
+    - {host: docs.marand.com, result: NXDOMAIN}
+    - {host: developer.marand.com, result: NXDOMAIN}
+    - {host: dev.marand.com, result: NXDOMAIN}
+    - {host: portal.marand.com, result: NXDOMAIN}
+    - {host: upc.marand.com, result: NXDOMAIN}
+    - {host: demo.marand.com, result: NXDOMAIN}
+    - {host: api.marand.si, result: NXDOMAIN}
+    - {host: docs.marand.si, result: NXDOMAIN}
