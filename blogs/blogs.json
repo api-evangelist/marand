@@ -1,0 +1,14 @@
+{
+  "repo": "marand",
+  "feeds": [
+    {
+      "source": "https://marand.com/en/about",
+      "feed_url": "https://marand.com/en/about",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-09-06T19:17:18Z"
+}
