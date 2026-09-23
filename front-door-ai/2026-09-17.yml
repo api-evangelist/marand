@@ -1,0 +1,29 @@
+# Front Door AI Index — marand — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: marand
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.marand.com
+  final_host: www.marand.com
+  ownership: own
+  owner: marand
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 14
+  host_score: 14
+  density: 8.22
+  words: 1703
+  tiers:
+    agentic: 0
+    core: 14
+    model: 0
+  ambiguous: 7
+  top_terms:
+    artificial intelligence: 6
+    intelligence: 6
+    AI: 4
+    machine learning: 4
+    automation: 1
